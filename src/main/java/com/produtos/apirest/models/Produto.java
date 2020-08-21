@@ -12,8 +12,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name="TB_PRODUTO")
 public class Produto implements Serializable{
-	
-	private static final long seriualVersionUID = 1L;
+
+	private static final long serialVersionID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -56,7 +56,11 @@ public class Produto implements Serializable{
 	public void setValor(BigDecimal valor) {
 		this.valor = valor;
 	}
-	
+
+	public static long getSerialversionid() {
+		return serialVersionID;
+	}
+
 	
 
 }
